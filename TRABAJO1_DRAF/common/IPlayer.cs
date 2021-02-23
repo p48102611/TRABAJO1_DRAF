@@ -4,7 +4,10 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    interface IPlayer
+    public interface IPlayer
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int BehaviorScore { get; set; }
     }
 }

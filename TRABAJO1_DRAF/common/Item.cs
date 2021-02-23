@@ -4,11 +4,16 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Item
+    public class Item : IItem
     {
-        public string Name { get; set; }
-        public int Id { get; set; }
-        public int Price { get; set; }
-        public string Description { get; set; }
+        private int id;
+        private string name;
+        private int price;
+        private string description;
+
+        public int Id { get { return id; } set { id = value; } }
+        public string Name { get { return Name; } set { Name = value; } }
+        public int Price { get { return price; } set { price = value; } }
+        public string Description { get { return description; } set { description = value; } }
     }
 }
