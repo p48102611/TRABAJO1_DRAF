@@ -4,7 +4,8 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Game
+    interface IBannable
     {
+        public void BanHero(List<Hero> list, int id);
     }
 }

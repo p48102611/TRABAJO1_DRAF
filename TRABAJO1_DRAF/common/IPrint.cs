@@ -4,7 +4,8 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Game
+    public interface IPrint
     {
+        public void ShowInfo();
     }
 }

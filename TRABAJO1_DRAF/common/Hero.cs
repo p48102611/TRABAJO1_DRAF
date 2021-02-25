@@ -4,14 +4,22 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public class Hero : IHero
+    public class Hero : IPrint
     {
 
         private int id;
         private string name;
         private string characters;
+        private bool state;
         public int Id { get { return id; } set { id = value; } }
-        public string Name { get { return Name; } set { Name = value; } }
-        public string Characters { get { return Characters; } set { Characters = value; } }
+        public string Name { get { return Name; } set { name = value; } }
+        public string Characters { get { return Characters; } set { characters = value; } }
+        public bool State { get { return state; } set { state = value; } }
+        public bool ChangeState(){ state = !state; return state; }
+
+        public void ShowInfo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
