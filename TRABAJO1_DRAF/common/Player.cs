@@ -8,11 +8,12 @@ namespace TRABAJO1_DRAF.common
     {
         private int id;
         private string name;
+        private int gold;
         private int behaviorScore;
         public int Id { get { return id; } set { id = value; } }
         public string Name { get { return name; } set { name = value; } }
         public int BehaviorScore { get { return behaviorScore; } set { behaviorScore = value; } }
-
+        public int Gold { get { return gold; } set { gold = value; } }
         public void ShowInfo()
         {
             throw new NotImplementedException();
