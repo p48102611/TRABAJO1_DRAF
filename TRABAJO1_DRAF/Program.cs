@@ -23,6 +23,7 @@ namespace TRABAJO1_DRAF
             e.ExeBanHero<Banned>(1);
             e.ExeBanHeroExt<Banned>(2);
             e.ExeBanHeroExt<Banned>(3);
+            e.ExeBuyItem<BuyItem>(1, 9, 4);
             //e.ExeBanHero();
 
         }

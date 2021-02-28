@@ -11,7 +11,6 @@ namespace TRABAJO1_DRAF.common
         {
             var h = list.SingleOrDefault(e => e.Id == id);
             h.ChangeState();
-            Console.WriteLine(h.State);
         }
     }
 }
