@@ -5,20 +5,21 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Banned : IBannable
+    class Banned : IBanned, IExcute
     {
-        public void BanHero(List<Hero> list, int id)
-        {
-            var h = list.SingleOrDefault(e => e.Id == id);
-            h.ChangeState();
-            //Console.WriteLine(h.State);
-        }
+        //public void BanHero(List<Hero> list, int id)
+        //{
+        //    var h = list.SingleOrDefault(e => e.Id == id);
+        //    h.ChangeState();
+        //    Console.WriteLine(h.State);
+        //}
 
-        public Action<List<Hero>, int> BanHero1 = (list, id) =>
+        public Action<List<Hero>, int> BanHero = (list, id) =>
         {
             var h = list.SingleOrDefault(e => e.Id == id);
             h.ChangeState();
             Console.WriteLine(h.State);
         };
+        
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public class Item : IPrint
+    public class Item : IPrint, IExcute, IItem
     {
         private int id;
         private string name;

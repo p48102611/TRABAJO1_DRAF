@@ -4,8 +4,8 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    interface IBannable
+    public interface IExcute
     {
-        public void BanHero(List<Hero> list, int id);
+
     }
 }
