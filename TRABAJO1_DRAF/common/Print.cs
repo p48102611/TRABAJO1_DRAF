@@ -4,11 +4,11 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Print : IPrint, IExcute
+    class Print : IExcute
     {
-        public void ShowInfo()
+        public void ShowInfo(IPrint p)
         {
-            throw new NotImplementedException();
+            p.ShowInfo();
         }
     }
 }

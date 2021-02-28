@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public class Item : IPrint, IExcute, IItem
+    public class Item : IPrint, IExcute//, IItem
     {
         private int id;
         private string name;
@@ -12,7 +12,7 @@ namespace TRABAJO1_DRAF.common
         private string description;
 
         public int Id { get { return id; } set { id = value; } }
-        public string Name { get { return Name; } set { name = value; } }
+        public string Name { get { return name; } set { name = value; } }
         public int Price { get { return price; } set { price = value; } }
         public string Description { get { return description; } set { description = value; } }
 

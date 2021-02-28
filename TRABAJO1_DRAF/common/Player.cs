@@ -5,23 +5,32 @@ using static TRABAJO1_DRAF.Program;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Player : //IPrint, IExcute, IPlayer
+    public class Player : IPrint, IExcute//, IPlayer
     {
         private int id;
         private string name;
         private int gold;
         private int behaviorScore;
-        private Hero pickHero = new Hero();
+        private Hero heroPicked = new Hero();
         public MyGenericArray<Item> items = new MyGenericArray<Item>(9);
         public int Id { get { return id; } set { id = value; } }
         public string Name { get { return name; } set { name = value; } }
         public int BehaviorScore { get { return behaviorScore; } set { behaviorScore = value; } }
         public int Gold { get { return gold; } set { gold = value; } }
-        public Hero PickHero { get { return pickHero; } set { pickHero = value; } }
+        public Hero HeroPicked { get { return heroPicked; } set { heroPicked = value; } }
         public MyGenericArray<Item> Items { get { return items; } set { items = value; } }
         public void ShowInfo()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Player: {Name} | BehaviorScore: {BehaviorScore} | Gold: {Gold} | Hero: {HeroPicked} | Items: {ShowItemsPlayer()}");
+        }
+        public string ShowItemsPlayer()
+        {
+            string tmp = "";
+            for (int c = 0; c < 9; c++)
+            {
+                tmp += $"|{items.getItem(c)}";
+            }
+            return tmp;
         }
     }
 }

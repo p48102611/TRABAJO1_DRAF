@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public class Hero : IPrint, IExcute, IHero
+    public class Hero : IPrint, IExcute//, IHero
     {
 
         private int id;
@@ -12,8 +12,8 @@ namespace TRABAJO1_DRAF.common
         private string characters;
         private bool state;
         public int Id { get { return id; } set { id = value; } }
-        public string Name { get { return Name; } set { name = value; } }
-        public string Characters { get { return Characters; } set { characters = value; } }
+        public string Name { get { return name; } set { name = value; } }
+        public string Characters { get { return characters; } set { characters = value; } }
         public bool State { get { return state; } set { state = value; } }
         public bool ChangeState(){ state = !state; return state; }
 
