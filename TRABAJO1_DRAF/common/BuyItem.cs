@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class BuyItem : IBuyItem, IExcute
+    class BuyItem : IBuyItem, IExecute
     {
         public static Action<List<Player>, List<Item>,int, int, int> buyItem = (listP, listI, p, i, pos) =>
         {

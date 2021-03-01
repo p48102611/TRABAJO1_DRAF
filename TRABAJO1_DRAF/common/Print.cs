@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Print : IExcute
+    class Print
     {
         public void ShowInfo(IPrint p)
         {

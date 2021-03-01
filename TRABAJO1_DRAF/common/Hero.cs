@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public class Hero : IPrint, IExcute//, IHero
+    public class Hero : IPrint, IExecute//, IHero
     {
 
         private int id;
@@ -19,7 +19,7 @@ namespace TRABAJO1_DRAF.common
 
         public void ShowInfo()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"IdHero: {Id} | Name: {Name} | Enable: {State} ");
         }
     }
 }

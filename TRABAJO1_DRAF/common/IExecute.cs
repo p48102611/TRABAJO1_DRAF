@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public interface IExcute
+    public interface IExecute
     {
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    public class Item : IPrint, IExcute//, IItem
+    public class Item : IPrint, IExecute//, IItem
     {
         private int id;
         private string name;
@@ -18,7 +18,7 @@ namespace TRABAJO1_DRAF.common
 
         public void ShowInfo()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"| IdItem: {Id} | Name: {Name} | Price: {Price} ");
         }
     }
 }

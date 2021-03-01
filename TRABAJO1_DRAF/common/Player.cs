@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using static TRABAJO1_DRAF.Program;
-
 namespace TRABAJO1_DRAF.common
 {
-    public class Player : IPrint, IExcute//, IPlayer
+    public class Player : IPrint, IExecute//, IPlayer
     {
         private int id;
         private string name;
@@ -26,15 +25,13 @@ namespace TRABAJO1_DRAF.common
         public int[] Items { get { return items; } set { items = value; } }
         public void ShowInfo()
         {
-            Console.WriteLine($"Player: {Name} | BehaviorScore: {BehaviorScore} | Gold: {Gold} | Hero: {HeroPicked} | Items: {ShowItemsPlayer()}");
+            Console.WriteLine($"| IdPlayer: {Id} | Name: {Name} | BehaviorScore: {BehaviorScore} | Gold: {Gold} | Hero: {HeroPicked}\n      Items: [{ShowItemsPlayer()}]");
         }
         public string ShowItemsPlayer()
         {
-            string tmp = "Items: ";
+            string tmp = "";
             for (int c = 0; c < 9; c++)
-            {
-                tmp += $"|{Items[c]}";
-            }
+                tmp += $"| {Items[c]} ";
             return tmp;
         }
     }

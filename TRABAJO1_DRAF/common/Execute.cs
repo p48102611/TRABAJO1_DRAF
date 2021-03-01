@@ -6,31 +6,49 @@ using TRABAJO1_DRAF;
 using static TRABAJO1_DRAF.Program;
 namespace TRABAJO1_DRAF.common
 {
-    public class Execute<T> where T : IExcute
+    public class Execute
     {
         public List<Hero> HeroesList = HeroesListDefault();
         public List<Item> ItemsList = ItemsListDefault();
         public List<Player> PlayersList = PlayersListDefault();
-
+        public List<IPrint> Printable = new List<IPrint>();
+        Print p = new Print();
         public void ExeBanHero<T>(int i) where T : IBanned, new()
         {
-            T ban = new T();
+            var ban = new T();
             ban.BanHero(HeroesList, i);
         }
         public void ExeBuyItem<T>(int idP, int idI, int posI) where T : IBuyItem, new()
         {
-            T buy = new T();
-            buy.BuyItemMethod(PlayersList, ItemsList, idP, idI, posI);
+            var buy = new T();
+            buy.BuyItemMethod(PlayersList, ItemsList, idP, idI, posI - 1);
         }
-        //public Action<int,int> ExeSellItem = (idPlayer, idItem) =>
-        //{
-        //    var P = ItemsList.SingleOrDefault(e => e.Id == idPlayer);
-        //    //Console.WriteLine(h.State);            
-        //};
-        //public void 
+        public void ExePrintPlayers()
+        {
+            PrintList<Player>(PlayersList);
+        }
+        public void ExePrintAll()
+        {
+            AddPrintable();
+            PrintList<IPrint>(Printable);
+        }
+        public void PrintList<T>(List<T> list) where T : IPrint
+        {
+            foreach (T item in list)
+                p.ShowInfo(item);
+        }
+        public void AddPrintable()
+        {
+            foreach (var item in PlayersList)
+                Printable.Add(item);
+            foreach(var item in ItemsList)
+                Printable.Add(item);
+            foreach (var item in HeroesList)
+                Printable.Add(item);
+        }
         public void ExeBanHeroExt<T>(int i) where T : IBanned, new()
         {
-            T ban = new T();
+            var ban = new T();
             ban.BanHeroExt(HeroesList, i);
         }
         public static List<Hero> HeroesListDefault()

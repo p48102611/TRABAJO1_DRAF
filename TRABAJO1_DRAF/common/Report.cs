@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Report : IReport, IExcute
+    class Report : IReport, IExecute
     {
 
     }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TRABAJO1_DRAF.common
 {
-    class Banned : IBanned, IExcute
+    class Banned : IBanned, IExecute
     {
         public void BanHero(List<Hero> list, int id)
         {
